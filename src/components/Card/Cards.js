@@ -11,7 +11,9 @@ function Cards (props){
             { props.items.map((product, index) =>(
         <div className="col mb-4" key={index}>
         <div className="card h-100" >
-            <img src={product.image} className="card-img-top" alt="..." />
+            <img src={product.image?product.image:
+            "https://thumbs.dreamstime.com/b/el-logotipo-linear-negro-de-la-c%C3%A1mara-foto-no-le-gusta-ninguna-imagen-disponible-106031126.jpg"
+            } className="card-img-top" alt="..." width="250" height="400"/>
             <div className="card-body">
                 <h5 className="card-title">
                     {product.product_name}
