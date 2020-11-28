@@ -64,14 +64,31 @@ function Signup(){
                         name="email"
                         id="email" />
                     </div>
-                    <div>
-                        <input type="radio" 
-                        id="male" name="gender" value="M"/>
-                        <label htmlFor="">Male</label><br/>
-                        <input type="radio" id="female" name="gender" value="F"/>
-                        <label htmlFor="female">Female</label><br/>
-                        <input type="radio" id="other" name="gender" value="X"/>
-                        <label htmlFor="other">Other</label>
+                    <div className="input-group ">
+                        
+                        <input type="radio"
+                        value={inputs.gender}
+                        onChange={handleInputChange}
+                        className="form-control"  
+                        name="gender" 
+                        id="male" />
+                        <label htmlFor="">M</label>
+                        
+                        <input type="radio"
+                        value={inputs.gender}
+                        onChange={handleInputChange}
+                        className="form-control"
+                        name="gender"   
+                        id="female" />
+                        <label htmlFor="">F</label>
+                        
+                        <input type="radio"
+                        value={inputs.gender}
+                        onChange={handleInputChange}
+                        className="form-control"
+                        name="gender" 
+                        id="other" />
+                        <label htmlFor="">X</label>                 
                     </div>
                     <div className="col-md-5">
                         <label htmlFor="">Password</label>

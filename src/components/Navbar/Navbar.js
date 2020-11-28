@@ -4,6 +4,7 @@ import payload from '../../utils/payload';
 import './Navbar.scss';
 function Navbar() {
   const user = payload();
+    console.log(user)
   // https://getbootstrap.com/docs/4.5/components/navbar/#nav
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
