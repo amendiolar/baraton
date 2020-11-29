@@ -64,31 +64,37 @@ function Signup(){
                         name="email"
                         id="email" />
                     </div>
-                    <div className="input-group ">
-                        
-                        <input type="radio"
-                        value={inputs.gender}
-                        onChange={handleInputChange}
-                        className="form-control"  
-                        name="gender" 
-                        id="male" />
-                        <label htmlFor="">M</label>
-                        
-                        <input type="radio"
-                        value={inputs.gender}
-                        onChange={handleInputChange}
-                        className="form-control"
-                        name="gender"   
-                        id="female" />
-                        <label htmlFor="">F</label>
-                        
-                        <input type="radio"
-                        value={inputs.gender}
-                        onChange={handleInputChange}
-                        className="form-control"
-                        name="gender" 
-                        id="other" />
-                        <label htmlFor="">X</label>                 
+                    <div className="form-group">
+                        <legend className="col-form-legend col-sm-2">Genero</legend>
+                        <div className="form-check">
+                            <label htmlFor="" className="form-check-label">
+                                <input type="radio"
+                                value="M"
+                                onChange={handleInputChange}
+                                className="form-check-input radio-inline"  
+                                name="gender"
+                                checked={inputs.gender === 'M'} 
+                                id="male" />
+                            M</label><br/>
+                            <label htmlFor="" className="form-check-label">
+                                <input type="radio"
+                                value="F"
+                                onChange={handleInputChange}
+                                className="form-check-input radio-inline"
+                                name="gender"
+                                checked={inputs.gender === 'F'}    
+                                id="female" />
+                            F</label><br/>
+                            <label htmlFor="" className="form-check-label">
+                                <input type="radio"
+                                value="X"
+                                onChange={handleInputChange}
+                                className="form-check-input radio-inline"
+                                name="gender"
+                                checked={inputs.gender === 'X'}  
+                                id="other" />
+                            X</label><br/>
+                        </div>                 
                     </div>
                     <div className="col-md-5">
                         <label htmlFor="">Password</label>
