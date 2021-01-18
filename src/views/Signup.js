@@ -11,7 +11,7 @@ function Signup(){
         delete data.password_confirm
         axios.post("https://ecomerce-master.herokuapp.com/api/v1/signup", data)
             .then((response) =>{
-                if(response.status === 201){
+                if(response.status === 200){
                     // cuando se crea el usuario lo enviamos a login
                     history.push("/")
                 }
@@ -38,7 +38,7 @@ function Signup(){
                         id="first_name" />
                     </div>
                     <div className="col-md-5">
-                        <label htmlFor="">Apellidos</label>
+                        <label htmlFor="">Apellido Paterno</label>
                         <input type="text"
                         value={inputs.last_name}
                         onChange={handleInputChange}
@@ -115,7 +115,7 @@ function Signup(){
                         id="password_confirm" />
                     </div>
                     <div className="col-md-12">
-                        <button type="submit" className="btn btn-dark">iniciar</button>
+                        <button type="submit" className="btn btn-dark">registro</button>
                     </div>
                 </div>
             </div>
