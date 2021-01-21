@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-do
 import Home from './views/Home';
 import Signup from './views/Signup';
 import Login from './views/Login';
+import Product from "./views/Product";
 // import Quote from './views/Quote';
 
  const Logout = () =>{
@@ -14,9 +15,11 @@ function Routes(){
         <Router>
             <Switch>
                 <Route exact path="/" component={Home} ></Route>
+                <Route  path="/product/:productId" component={Product}/>
                 <Route exact path="/signup" component={Signup} ></Route>
                 <Route exact path="/login" component={Login} ></Route>
                 <Route exact path="/logout" component={Logout} ></Route>
+                
             </Switch>
         </Router>
     )
