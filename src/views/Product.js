@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import NavBar from "../components/Navbar";
 import axios from 'axios';
 
+
 const Product = () => {
   
   const token = localStorage.getItem('token')
@@ -23,6 +24,7 @@ const Product = () => {
   }, [productId]);
 
   
+
   return (
 
     <div className="animate__animated animate__fadeIn">
@@ -85,7 +87,9 @@ const Product = () => {
                             <p className="mt-2">SKU:  {selectedProduct.sku}</p>
                         </div>
                         <div className="card-body">
-                            <button type="button" className="btn btn-secondary">Agregar</button>
+                                <button type="button" className="btn btn-secondary">Agregar</button>
+                                <h4>Recuerda que para comprar debes ingresar a tu cuenta</h4>
+                                <h4>Si aun no tienes cuenta te invitamos a registrarte</h4>
                         </div>
                     </div>
                 </div>
